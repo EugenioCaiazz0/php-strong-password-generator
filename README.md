@@ -20,3 +20,4 @@ Simboli: !?&%$<>^+-*/()[]{}@#_
 **Svolgimento**
 
 1 - Chiediamo la lunghezza tramite form all'utente, per poi utilizzare tale dato per un ciclo che prenderà un elemento random dall'insieme di caratteri alfanumerici e simboli
+2 - Creare una nuova cartella data o functions, sempre in PHP, nella quale spostare il codice di riferimento e richiamare tramite "inclusione" nell'index con l'uso della costante magica DIR che restituisce l'indirizzo assoluto del file

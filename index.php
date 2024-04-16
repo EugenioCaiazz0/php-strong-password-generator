@@ -1,40 +1,24 @@
 <?php
-
-$password = "";
-$passwordLength = $_GET['passwordLengthInput'];
-if(!isset($_GET['passwordLengthInput'])) {
-    $passwordLength = '0';
-} else {
-    $password = passwordGeneration($passwordLength, $password);
-};
-//risolto il casino con password, il problema principale era lo scope della funzione
-
-function passwordGeneration($length, $resultString) {
-        
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?&%$<>^+-*/()[]{}@#_';
-     
-    for ($i = 0; $i <= $length; $i++) {
-        $index = rand(0, strlen($characters) - 1);
-        $resultString .= $characters[$index];
-    }
-     
-    return $resultString;
-} 
-
+require_once __DIR__ . '/data/functions.php';
 include_once __DIR__ . '/components/head.php';
 ?>
 
 <body>
+
+<div class="card text-center  d-flex w-50 my-5 mx-auto border-primary  ">
     <form action="index.php" method="GET" class=""> 
-    <div class="mb-3">
+    <div class="mb-3 card-body ">
         <label class="form-label">Scegliere lunghezza password</label>
-        <input type="number" class="form-control" name="passwordLengthInput"  id="" placeholder="" min="5" max="20">
+        <input type="number" class="form-control justify-self-center" name="passwordLengthInput"  id="" placeholder="" min="5" max="20">
+        <button type="submit" class="btn btn-primary my-3 ">Submit</button>
     </div>
     </form>
 
-    <p> "La lunghezza della password è: <?php echo $passwordLength?>"</p>
-    <p> "La password generata automaticamente è: <?php echo $password?>"</p>
+    <p"> La lunghezza della password è: <span class="fw-bold"><?php echo $passwordLength?></span> </p>
+    <p> La password generata automaticamente è: <span class="fw-bold"><?php echo $password?></span> </p>
     
+</div>
+
 </body>
 
 </html>
