@@ -16,3 +16,7 @@ Gestire ulteriori parametri per la password: quali caratteri usare fra numeri, l
 Dare all’utente anche la possibilità di permettere o meno la ripetizione di caratteri uguali.
 Simboli: !?&%$<>^+-*/()[]{}@#_
 
+===
+**Svolgimento**
+
+1 - Chiediamo la lunghezza tramite form all'utente, per poi utilizzare tale dato per un ciclo che prenderà un elemento random dall'insieme di caratteri alfanumerici e simboli
