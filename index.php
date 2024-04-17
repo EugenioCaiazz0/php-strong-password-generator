@@ -14,8 +14,7 @@ include_once __DIR__ . '/components/head.php';
     </div>
     </form>
 
-    <p"> La lunghezza della password è: <span class="fw-bold"><?php echo $passwordLength?></span> </p>
-    <p> La password generata automaticamente è: <span class="fw-bold"><?php echo $password?></span> </p>
+    
     
 </div>
 
